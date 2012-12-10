@@ -1,2 +1,3 @@
 sources:
-  "luarocks-1.0.tar.gz:"	96223c3da6257e5370d031221279b1c89731baef
+  "luarocks-1.0.tar.gz": 96223c3da6257e5370d031221279b1c89731baef
+  luarocks-2.0.12.tar.gz: bfa36d5a9931c240c0253dee09c0cfb69372d276
