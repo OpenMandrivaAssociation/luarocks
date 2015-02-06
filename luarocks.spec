@@ -4,7 +4,7 @@
 
 Name:           luarocks
 Version:        2.0.12
-Release:        %mkrel 1
+Release:        2
 Summary:        Deployment and management system for Lua modules
 
 Group:          Development/Other
