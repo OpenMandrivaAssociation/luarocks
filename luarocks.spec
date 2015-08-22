@@ -1,10 +1,10 @@
-%define luaver 5.1
+%define luaver 5.3
 %define lualibdir %{_libdir}/lua/%{luaver}
 %define luapkgdir %{_datadir}/lua/%{luaver}
 
 Name:           luarocks
-Version:        2.0.12
-Release:        2
+Version:        2.2.2
+Release:        1
 Summary:        Deployment and management system for Lua modules
 
 Group:          Development/Other
@@ -12,7 +12,9 @@ License:        MIT
 URL:            http://www.luarocks.org/
 Source0:        http://luaforge.net/frs/download.php/3727/%{name}-%{version}.tar.gz
 
-BuildRequires:  lua >= %{luaver}, lua-devel >= %{luaver}
+BuildRequires:   lua >= %{luaver}
+BuildRequires:   lua-devel >= %{luaver}
+
 Requires:       lua >= %{luaver}
 Requires:       wget
 
@@ -32,7 +34,7 @@ and multiple local rocks trees.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 for file in COPYING_7z; do
  sed "s|\r||g" $file > $file.new && \
@@ -42,13 +44,14 @@ done
 
 
 %build
-./configure --prefix=/usr --sysconfdir=%{_sysconfdir}/%{name} --rocks-tree=%{lualibdir} --lua-suffix=%{luaver}
+./configure --prefix=%{_prefix}
 make
 
 %install
-make DESTDIR=%{buildroot} install
+%makeinstall_std
 
 %files
-%{_sysconfdir}/luarocks/config.lua
+%doc COPYING README.md 
+%config(noreplace) %{_sysconfdir}/luarocks/config-%{luaver}.lua
 %{_bindir}/*
 %{luapkgdir}/%{name}/*
