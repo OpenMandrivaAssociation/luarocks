@@ -1,4 +1,4 @@
-%define luaver 5.3
+%define luaver 5.4
 %define lualibdir %{_libdir}/lua/%{luaver}
 %define luapkgdir %{_datadir}/lua/%{luaver}
 
