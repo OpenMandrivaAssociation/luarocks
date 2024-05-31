@@ -1,5 +1,2 @@
-removed_sources:
-  luarocks-1.0.tar.gz: 96223c3da6257e5370d031221279b1c89731baef
-  luarocks-2.0.12.tar.gz: bfa36d5a9931c240c0253dee09c0cfb69372d276
 sources:
-  luarocks-2.2.2.tar.gz: 519c3e6e86465e4be9650353622b14a5b8f22d8b
+  luarocks-3.11.0.tar.gz: 0d41d8718d110e4e51259c9edf0a6ffc509b601e
