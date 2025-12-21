@@ -11,6 +11,11 @@ License:        MIT
 URL:            https://luarocks.org
 Source0:        https://luarocks.org/releases/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:   lua >= %{luaver}
 BuildRequires:   lua-devel >= %{luaver}
 
