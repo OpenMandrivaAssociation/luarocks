@@ -2,7 +2,7 @@
 %define luapkgdir %{_datadir}/lua/%{luaver}
 
 Name:           luarocks
-Version:        3.12.2
+Version:        3.13.0
 Release:        1
 Summary:        Deployment and management system for Lua modules
 
